@@ -17,8 +17,7 @@ defined( 'ABSPATH' ) or exit;
 define( 'LIMIT_IMAGE_FILESIZE_VERSION', '1.0' );
 
 //this keeps coming through as 0 some I'm not using it below but ideally it would be set here
-define( 'MAX_IMAGE_FILESIZE', 5 ); //start with 5 MB
-
+//define( 'MAX_IMAGE_FILESIZE', 5 ); //start with 5 MB
 
 /**
  * Run plugin update process on activation.
@@ -122,8 +121,6 @@ add_filter( 'wp_handle_upload_prefilter', 'detect_filetype_on_upload' );
 add_filter('gettext', function($translated_text, $text, $domain) {
     // Check if we are in the admin area and looking for the specific string
     if (is_admin() && 'Maximum upload file size: %s.' === $text) {
-
-        error_log( 'filesize is '.$MAX_IMAGE_FILESIZE );
 
         // Append your custom text here
         $translated_text = sprintf('%s Image uploads restricted to 5 MB.', $text );
