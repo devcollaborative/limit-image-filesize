@@ -2,7 +2,7 @@
 A WordPress plugin that limits uploaded images to 5MB filesize
 
 ## Description
-This plugin checks the upload file type and if it's an image, rejects it if its larger than 5MB. Documents and other non-image media larger than 5MB are allowed. 
+This plugin checks the upload file type and if it's an image, rejects it if it's larger than 5MB. Documents and other non-image media larger than 5MB are allowed. 
 
 The plugin also adds text to the message on the Media Gallery upload screen "Maximum upload file size: 100 MB. Image uploads restricted to 5 MB."
 
